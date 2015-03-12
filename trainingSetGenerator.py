@@ -7,22 +7,20 @@ PROPORTION_PURCHASED = 0.25
 OUTPUT_FILE_NAME = "examples.py"
 
 # All of the features of shoes with all of their possible values
-featuresWithValues = { "brand" : ["Nike", "Adidas", "Frye", "Converse", "Skechers"],
-                       "size"  : [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12],
-                       "width" : ["narrow", "regular", "wide"],
-                       "style" : ["athletic", "dress", "casual", "work"],
-                       "material" : ["leather", "synthetic", "canvas"],
-                       "laced" : ["yes", "no"] }
+featuresWithValues = { "brewer" : ["Bell's", "Founders", "Arcadia", "Shorts", "New Holland"],
+                       "abv"    : [3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5],
+                       "size"   : ["12oz", "22oz", "750mL"],
+                       "style"  : ["IPA", "stout", "belgian", "sour"],
+                       "package" : ["can", "bottle"] }
 
 # A score for each value of each feature (lists will be normalized)
 # indicating about how likely each value will be chosen for shoes
 # that were purchased
-featureTendencies = { "brand" : [50, 40, 10, 15, 20],
-                      "size"  : [0, 5, 5, 0, 15, 50, 40, 10, 0],
-                      "width" : [10, 60, 20],
-                      "style" : [50, 10, 20, 0],
-                      "material" : [15, 50, 20],
-                      "laced" : [70, 30] }
+featureTendencies = { "brewer" : [50, 40, 10, 15, 20],
+                      "abv"    : [0, 5, 5, 0, 15, 50, 40, 10, 0],
+                      "size"   : [10, 60, 20],
+                      "style"  : [50, 10, 20, 0],
+                      "package" : [70, 30] }
 
 # Names for the purchased/not purchased classes
 classNames = { True : "purchased", False: "not-purchased" }
