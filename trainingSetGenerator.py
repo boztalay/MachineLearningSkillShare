@@ -1,7 +1,5 @@
 import random
 
-# This is a mess. Sorry.
-
 TRAINING_SET_SIZE = 750
 TEST_SET_SIZE = 10
 TENDENCY_CHOICE_LIST_SIZE = 20
@@ -70,6 +68,7 @@ for i in range(0, TRAINING_SET_SIZE + TEST_SET_SIZE):
     examples.append((example, classNames[isPurchased]))
 
 # Write the training set to a file
+# This is a mess. I'm sorry.
 
 try:
     examplesFile = open(OUTPUT_FILE_NAME, "w")
