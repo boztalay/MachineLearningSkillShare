@@ -6,7 +6,7 @@ TENDENCY_CHOICE_LIST_SIZE = 20
 PROPORTION_PURCHASED = 0.25
 OUTPUT_FILE_NAME = "examples.py"
 
-# All of the features of shoes with all of their possible values
+# All of the features of beers with all of their possible values
 featuresWithValues = { "brewer" : ["Bell's", "Founders", "Arcadia", "Shorts", "New Holland"],
                        "abv"    : [3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5],
                        "size"   : ["12oz", "22oz", "750mL"],
@@ -14,7 +14,7 @@ featuresWithValues = { "brewer" : ["Bell's", "Founders", "Arcadia", "Shorts", "N
                        "package" : ["can", "bottle"] }
 
 # A score for each value of each feature (lists will be normalized)
-# indicating about how likely each value will be chosen for shoes
+# indicating about how likely each value will be chosen for beers
 # that were purchased
 featureTendencies = { "brewer" : [50, 40, 10, 15, 20],
                       "abv"    : [0, 5, 5, 0, 15, 50, 40, 10, 0],
@@ -44,7 +44,7 @@ for i in range(0, TRAINING_SET_SIZE + TEST_SET_SIZE):
 
     if isPurchased:
         for featureName, tendencies in featureTendencies.iteritems():
-            # If this is an example of a purchased shoe, we need a weighted
+            # If this is an example of a purchased beer, we need a weighted
             # random choice of a value for each feature based on the tendencies.
             # This is done kind of quick and dirty by making a list of values
             # for each feature where values with higher tendencies are repeated more,
@@ -59,7 +59,7 @@ for i in range(0, TRAINING_SET_SIZE + TEST_SET_SIZE):
             example[featureName] = random.choice(weightedListOfValues)
     else:
         for featureName, values in featuresWithValues.iteritems():
-            # If this is an example of a shoe that wasn't purchased, just
+            # If this is an example of a beer that wasn't purchased, just
             # randomly pick a value for each feature
             example[featureName] = random.choice(values)
 
